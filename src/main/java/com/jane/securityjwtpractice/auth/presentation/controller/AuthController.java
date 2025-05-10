@@ -1,4 +1,4 @@
-package com.jane.securityjwtpractice.presentation.controller;
+package com.jane.securityjwtpractice.auth.presentation.controller;
 
 import com.jane.securityjwtpractice.user.domain.UserService;
 import lombok.Getter;
