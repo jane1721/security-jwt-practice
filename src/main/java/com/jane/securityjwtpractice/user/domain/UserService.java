@@ -16,13 +16,7 @@ public class UserService {
         if (userRepository.findByUsername(username).isPresent()) {
             throw new IllegalArgumentException("이미 존재하는 사용자입니다.");
         }
-
-        User user = User.builder()
-                .username(username)
-                .password(passwordEncoder.encode(password)) // 암호화
-                .role("ROLE_USER")
-                .build();
-
+        User user = User.createUser(username, password, passwordEncoder);
         return userRepository.save(user);
     }
 }

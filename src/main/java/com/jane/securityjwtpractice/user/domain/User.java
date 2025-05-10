@@ -2,6 +2,7 @@ package com.jane.securityjwtpractice.user.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Entity
 @Table(name = "users")
@@ -21,4 +22,12 @@ public class User {
     private String password;
 
     private String role; // ex: "ROLE_USER"
+
+    public static User createUser(String username, String rawPassword, PasswordEncoder passwordEncoder) {
+        return User.builder()
+                .username(username)
+                .password(passwordEncoder.encode(rawPassword)) // 암호화
+                .role("ROLE_USER")
+                .build();
+    }
 }
