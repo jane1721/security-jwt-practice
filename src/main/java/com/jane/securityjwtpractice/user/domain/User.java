@@ -21,13 +21,14 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    private String role; // ex: "ROLE_USER"
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     public static User createUser(String username, String rawPassword, PasswordEncoder passwordEncoder) {
         return User.builder()
                 .username(username)
                 .password(passwordEncoder.encode(rawPassword)) // 암호화
-                .role("ROLE_USER")
+                .role(Role.USER)
                 .build();
     }
 }
