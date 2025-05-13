@@ -1,7 +1,7 @@
 package com.jane.securityjwtpractice.auth.config;
 
-import com.jane.securityjwtpractice.auth.jwt.JwtAuthenticationFilter;
-import com.jane.securityjwtpractice.auth.jwt.JwtProvider;
+import com.jane.securityjwtpractice.auth.presentation.filter.JwtAuthenticationFilter;
+import com.jane.securityjwtpractice.auth.util.JwtProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

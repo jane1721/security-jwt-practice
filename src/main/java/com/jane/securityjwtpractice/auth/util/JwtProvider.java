@@ -1,4 +1,4 @@
-package com.jane.securityjwtpractice.auth.jwt;
+package com.jane.securityjwtpractice.auth.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;

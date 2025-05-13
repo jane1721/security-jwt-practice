@@ -1,5 +1,6 @@
-package com.jane.securityjwtpractice.auth.jwt;
+package com.jane.securityjwtpractice.auth.presentation.filter;
 
+import com.jane.securityjwtpractice.auth.util.JwtProvider;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

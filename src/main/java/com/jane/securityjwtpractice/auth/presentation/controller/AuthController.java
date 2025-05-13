@@ -1,6 +1,6 @@
 package com.jane.securityjwtpractice.auth.presentation.controller;
 
-import com.jane.securityjwtpractice.auth.jwt.JwtProvider;
+import com.jane.securityjwtpractice.auth.util.JwtProvider;
 import com.jane.securityjwtpractice.user.domain.UserService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
